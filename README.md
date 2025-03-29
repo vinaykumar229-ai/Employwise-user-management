@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# EmployWise User Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This is a React-based user management application integrating with the Reqres API. It allows users to log in, view a paginated list of users, edit user details, and delete users.
 
-## Available Scripts
+## Features
+- **Authentication:** Login with provided credentials and store the token.
+- **User List:** Fetch and display users in a paginated manner.
+- **Search Users:** Search users by name.
+- **Edit Users:** Modify user details and update them.
+- **Delete Users:** Remove users from the list.
+- **Logout:** Allows users to log out securely.
 
-In the project directory, you can run:
+## Installation and Setup
 
-### `npm start`
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14 or later)
+- npm (comes with Node.js) or yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Steps to Run the Project
+1. Clone the repository:
+   
+   git clone https://github.com/your-username/employwise-user-management.git
+   
+2. Navigate to the project directory:
+   
+   cd employwise-user-management
+   
+3. Install dependencies:
+   
+   npm install
+   
+4. Start the development server:
+   
+   npm start
+  
+5. Open your browser and go to:
+   
+   http://localhost:3000
+   
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
+Employwise-user-management/
+│── public/
+│   ├── index.html
+│── src/
+│   ├── components/
+│   │   ├── Login.js
+│   │   ├── UsersList.js
+│   │   ├── EditUser.js
+│   ├── styles/
+│   │   ├── styles.css
+│   ├── App.js
+│   ├── index.js
+│── package.json
+│── README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## API Endpoints Used
+- **Login:** `POST /api/login`
+- **Get Users:** `GET /api/users?page=1`
+- **Edit User:** `PUT /api/users/{id}`
+- **Delete User:** `DELETE /api/users/{id}`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Assumptions & Considerations
+- The login credentials are fixed:
+  - **Email:** eve.holt@reqres.in
+  - **Password:** cityslicka
+- Data persistence is handled via local storage for the login token.
+- Users can navigate through paginated data using "Previous" and "Next" buttons.
+- The application UI is styled with CSS for a clean and responsive look.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
+This project can be hosted using services like:
+- **Netlify**
+- **Vercel**
+- **GitHub Pages**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Deployment on Vercel
 
-### `npm run eject`
+This project is deployed on Vercel. You can access it at:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Live Demo : https://employwise-user-management-one.vercel.app/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Steps to Deploy on Vercel:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install the Vercel CLI:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install -g vercel
 
-## Learn More
+Login to Vercel:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+vercel login
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Deploy the project:
 
-### Code Splitting
+vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Follow the on-screen instructions to complete the deployment.
+   
 
-### Analyzing the Bundle Size
+## License
+This project is open-source and free to use.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
+For issues or contributions, feel free to open a pull request or raise an issue on GitHub.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Depl
